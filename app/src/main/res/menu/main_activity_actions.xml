@@ -3,7 +3,7 @@
   <!-- Search, should appear as action button -->
   <item
       android:id="@+id/action_search"
-      android:icon="@drawable/ic_search_black_24dp"
+      android:icon="@drawable/ic_search_white_36dp"
       android:showAsAction="ifRoom"
       android:title="@string/action_search" />
   <!-- Settings, should always be in the overflow -->

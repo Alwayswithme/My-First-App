@@ -1,8 +1,10 @@
 package phx.me.myfirstapp;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -22,6 +24,13 @@ public class DisplayMessageActivity extends Activity {
         textView.setTextSize(40);
         textView.setText(message);
 
+        int height =0;
+        // Calculate ActionBar height
+        TypedValue tv = new TypedValue();
+        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+            height = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
+        }
+        textView.setPadding(0, height, 0, 0);
         // Set the text view as the activity layout
         setContentView(textView);
 
